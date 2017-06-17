@@ -1,0 +1,34 @@
+[Wed Jun 14 06:25:05.427017 2017] [mpm_prefork:notice] [pid 1056] AH00163: Apache/2.4.10 (Raspbian) configured -- resuming normal operations
+[Wed Jun 14 06:25:05.427116 2017] [core:notice] [pid 1056] AH00094: Command line: '/usr/sbin/apache2'
+[Wed Jun 14 16:49:55.270462 2017] [mpm_prefork:notice] [pid 1056] AH00169: caught SIGTERM, shutting down
+[Wed Jun 14 16:50:09.590831 2017] [mpm_prefork:notice] [pid 1129] AH00163: Apache/2.4.10 (Raspbian) configured -- resuming normal operations
+[Wed Jun 14 16:50:09.601234 2017] [core:notice] [pid 1129] AH00094: Command line: '/usr/sbin/apache2'
+[Wed Jun 14 22:10:10.469496 2017] [:error] [pid 1165] [client 192.168.0.58:6883] PHP Fatal error:  Call to undefined function loginform() in /var/www/html/index.php on line 46
+[Wed Jun 14 22:10:56.017117 2017] [:error] [pid 1167] [client 192.168.0.58:6885] PHP Fatal error:  Call to undefined function loginform() in /var/www/html/index.php on line 46
+[Wed Jun 14 22:10:58.849697 2017] [:error] [pid 1168] [client 192.168.0.58:6886] PHP Fatal error:  Call to undefined function loginform() in /var/www/html/index.php on line 46
+[Wed Jun 14 22:36:03.675500 2017] [:error] [pid 17903] [client 192.168.0.58:9015] PHP Fatal error:  Call to undefined function loginform() in /var/www/html/index.php on line 46
+[Wed Jun 14 22:43:09.440499 2017] [mpm_prefork:notice] [pid 1129] AH00169: caught SIGTERM, shutting down
+[Wed Jun 14 22:44:43.909455 2017] [mpm_prefork:notice] [pid 23282] AH00163: Apache/2.4.10 (Raspbian) configured -- resuming normal operations
+[Wed Jun 14 22:44:43.909632 2017] [core:notice] [pid 23282] AH00094: Command line: '/usr/sbin/apache2'
+[Wed Jun 14 22:44:52.551439 2017] [:error] [pid 23285] [client 192.168.0.58:9053] PHP Fatal error:  Call to undefined function loginform() in /var/www/html/index.php on line 46
+[Wed Jun 14 22:46:46.328537 2017] [mpm_prefork:notice] [pid 23282] AH00169: caught SIGTERM, shutting down
+[Wed Jun 14 22:47:18.022304 2017] [mpm_prefork:notice] [pid 23639] AH00163: Apache/2.4.10 (Raspbian) configured -- resuming normal operations
+[Wed Jun 14 22:47:18.022485 2017] [core:notice] [pid 23639] AH00094: Command line: '/usr/sbin/apache2'
+[Wed Jun 14 22:47:39.455037 2017] [mpm_prefork:notice] [pid 23639] AH00169: caught SIGTERM, shutting down
+[Wed Jun 14 22:56:10.867213 2017] [mpm_prefork:notice] [pid 24464] AH00163: Apache/2.4.10 (Raspbian) configured -- resuming normal operations
+[Wed Jun 14 22:56:10.867387 2017] [core:notice] [pid 24464] AH00094: Command line: '/usr/sbin/apache2'
+[Wed Jun 14 22:56:15.691260 2017] [core:alert] [pid 24467] [client 192.168.0.58:9128] /var/www/html/.htaccess: </FilesMatch>*/ without matching <FilesMatch>*/ section
+[Wed Jun 14 22:58:03.531574 2017] [mpm_prefork:notice] [pid 24464] AH00169: caught SIGTERM, shutting down
+[Wed Jun 14 22:58:04.983364 2017] [mpm_prefork:notice] [pid 24669] AH00163: Apache/2.4.10 (Raspbian) configured -- resuming normal operations
+[Wed Jun 14 22:58:04.983525 2017] [core:notice] [pid 24669] AH00094: Command line: '/usr/sbin/apache2'
+[Wed Jun 14 22:58:08.947480 2017] [core:alert] [pid 24672] [client 192.168.0.58:9131] /var/www/html/.htaccess: </FilesMatch>*/ without matching <FilesMatch>*/ section
+[Wed Jun 14 22:58:11.040331 2017] [core:alert] [pid 24673] [client 192.168.0.58:9132] /var/www/html/.htaccess: </FilesMatch>*/ without matching <FilesMatch>*/ section
+[Wed Jun 14 22:58:11.871904 2017] [core:alert] [pid 24674] [client 192.168.0.58:9133] /var/www/html/.htaccess: </FilesMatch>*/ without matching <FilesMatch>*/ section
+[Wed Jun 14 22:58:26.932960 2017] [mpm_prefork:notice] [pid 24669] AH00169: caught SIGTERM, shutting down
+[Wed Jun 14 22:58:28.364759 2017] [mpm_prefork:notice] [pid 24762] AH00163: Apache/2.4.10 (Raspbian) configured -- resuming normal operations
+[Wed Jun 14 22:58:28.364919 2017] [core:notice] [pid 24762] AH00094: Command line: '/usr/sbin/apache2'
+[Wed Jun 14 22:58:29.932610 2017] [:error] [pid 24765] [client 192.168.0.58:9135] PHP Fatal error:  Call to undefined function loginform() in /var/www/html/index.php on line 46
+[Wed Jun 14 23:00:35.325710 2017] [mpm_prefork:notice] [pid 24762] AH00169: caught SIGTERM, shutting down
+[Wed Jun 14 23:03:39.486745 2017] [mpm_prefork:notice] [pid 25255] AH00163: Apache/2.4.10 (Raspbian) configured -- resuming normal operations
+[Wed Jun 14 23:03:39.486924 2017] [core:notice] [pid 25255] AH00094: Command line: '/usr/sbin/apache2'
+[Wed Jun 14 23:03:45.080308 2017] [core:alert] [pid 25258] [client 192.168.0.58:9168] /var/www/html/.htaccess: </FilesMatch>*/ without matching <FilesMatch>*/ section
