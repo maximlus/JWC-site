@@ -1,0 +1,32 @@
+To-Do
+
+*in ideal order not actual completion order*
+
+1. HTML
+Actaully make the backbone to the website in terms of forms and structure
+
+2. CSS
+Make shit look neat as fuck.
+
+3. SQL Database
+Ensure that all tables in the database are noralised and all rows needed are created.
+
+4. PHP
+create a way for PHP to inteact with the database for login and data managment
+
+5. Streaming
+Socket.io is potential what is needed to stream the videos.
+
+5.5 streaming exstended
+create way to halt streaming as to not use up resources when no one is active.
+
+4.5 PHP betting
+enable PHP to add/remove points from relavent users.
+
+6. Cut up videos
+Create all videos needed
+
+7. PHP again
+Random select video from disk 1/2/3 and pull list of relavent hourse.
+
+8. Compleatention. I think.

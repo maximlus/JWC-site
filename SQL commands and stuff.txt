@@ -1,0 +1,86 @@
+MYSQL - Ensure correct SQL version
+##########################
+Note $ is NOT a part of code, it is used to denote a line of exacutable code.
+##########################
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+usefull comands
+
+Ctrl+C exit SQL.
+$show databases;
+$show tables;
+$DESCRIBE table;
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SET UP SEVER AND USER
+
+//Connect to the databse in putty.
+$mysql -uroot -hlocalhost -p 
+//toor
+
+//Create the database named JWC
+$CREATE DATABASE JWC;
+
+//Create a database user
+$CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'password_here';
+//Dave1234
+
+//Give permissions to the new user
+$GRANT ALL PRIVILEGES ON JWC.* TO 'wpuser'@'localhost';
+
+//Flush privlages for changes to take effect
+$FLUSH PRIVILEGES;
+
+//Connect to SQL from new user
+$mysql -uwpuser -hlocalhost JWC -p
+//note dropping JWC from the ^ command log's in the current user.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+REMOVE DATABASE AND USER
+
+
+//remove user 
+$DROP USER  user@'localhost';
+//user = wpuser
+//If error 1369 the user can not be found
+//potential fix is remove @'localhost'
+
+
+//remove database
+$drop database name;
+//name= JWC
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CREATE TABLES
+
+//Creates table named users, row data structure; 
+$CREATE TABLE users (name VARCHAR(20) NOT NULL, points INT, PRIMARY KEY (name));
+//varchar is string(number of avalible characters)
+//NOT NULL make's the row not null. NOT needed if being made PRIMARY KEY.
+//PRIMARY KEY is always at the end and the row in () that is to be the primary key.
+
+//Alternaitvly if already created 
+$ALTER TABLE users ADD PRIMARY KEY (name);
+
+//If mistaken and need to drop PRIMARY KEY
+$ALTER TABLE users DROP PRIMARY KEY(name);
+
+//Auto increment
+$CREATE TABLE Persons (ID int NOT NULL AUTO_INCREMENT, PRIMARY KEY (ID));
+//starts at 1
+//if wanting to start at diffrent number
+$ALTER TABLE Persons AUTO_INCREMENT=100;
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INSERT DATA
+
+//insert data into table (row,row) Value ('string',int)
+$INSERT INTO users (name,points) VALUES ('Jack',200);
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+VIEW DATA / SELECT DATA
+
+//Select all from table
+SELECT * FROM users;
