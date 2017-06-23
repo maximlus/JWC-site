@@ -10,7 +10,8 @@ Ctrl+C exit SQL.
 $show databases;
 $show tables;
 $DESCRIBE table;
-
+// use this to select what database you wish to edit.
+$use database_name;
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -73,13 +74,15 @@ $CREATE TABLE Persons (ID int NOT NULL AUTO_INCREMENT, PRIMARY KEY (ID));
 //if wanting to start at diffrent number
 $ALTER TABLE Persons AUTO_INCREMENT=100;
 
-$CREATE TABLE hourse (ID TINYINT AUTO_INCREMENT, name VARCHAR(20) NOT NULL, disk SMALLINT NOT NULL, event VARCHAR(20), score FLOAT(3,2) NOT NULL, number SMALLINT NOT NULL, PRIMARY KEY(ID));
+$CREATE TABLE hourse (ID TINYINT AUTO_INCREMENT, name VARCHAR(20) NOT NULL, disk SMALLINT NOT NULL, event VARCHAR(20), score FLOAT(5,2) NOT NULL, number SMALLINT NOT NULL, PRIMARY KEY(ID));
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 INSERT DATA
 
 //insert data into table (row,row) Value ('string',int)
 $INSERT INTO users (name,points) VALUES ('Jack',200);
+
+$INSERT INTO hourse (name,disk,event,score,number) VALUES ('test','1','eventtest',123.45,1);
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 VIEW DATA / SELECT DATA
