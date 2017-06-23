@@ -2,7 +2,7 @@
 aduser="root" #admin username
 user="webuser" #new username
 adpassword="toor" # admin password
-pass="Dave12234" #new user password
+pass="Dave1234" #new user password
 database="JWC" # Database name
 str="-u ${aduser} -p${adpassword}" # cause this line needed to be written alot and I am lazy.
 echo script start

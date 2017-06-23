@@ -73,6 +73,8 @@ $CREATE TABLE Persons (ID int NOT NULL AUTO_INCREMENT, PRIMARY KEY (ID));
 //if wanting to start at diffrent number
 $ALTER TABLE Persons AUTO_INCREMENT=100;
 
+$CREATE TABLE hourse (ID TINYINT AUTO_INCREMENT, name VARCHAR(20) NOT NULL, disk SMALLINT NOT NULL, event VARCHAR(20), score FLOAT(3,2) NOT NULL, number SMALLINT NOT NULL, PRIMARY KEY(ID));
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 INSERT DATA
 
