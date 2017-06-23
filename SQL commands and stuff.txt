@@ -53,6 +53,9 @@ $DROP USER  user@'localhost';
 $drop database name;
 //name= JWC
 
+
+//drop row from a table
+$DELETE FROM table WHERE colum=something;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 CREATE TABLES
 
@@ -74,7 +77,11 @@ $CREATE TABLE Persons (ID int NOT NULL AUTO_INCREMENT, PRIMARY KEY (ID));
 //if wanting to start at diffrent number
 $ALTER TABLE Persons AUTO_INCREMENT=100;
 
-$CREATE TABLE hourse (ID TINYINT AUTO_INCREMENT, name VARCHAR(20) NOT NULL, disk SMALLINT NOT NULL, event VARCHAR(20), score FLOAT(5,2) NOT NULL, number SMALLINT NOT NULL, PRIMARY KEY(ID));
+//creation of table for hourses.
+$CREATE TABLE hourse (ID TINYINT AUTO_INCREMENT, name VARCHAR(20) NOT NULL, disk SMALLINT NOT NULL, event VARCHAR(20), score FLOAT(5,2) NOT NULL, number SMALLINT NOT NULL, wins SMALLINT, PRIMARY KEY(ID));
+
+// creation of he race table that will have the ID of the video, who the winner is, what disk it is from and video length.
+$CREATE TABLE race (ID VARCHAR(10), winner VARCHAR(20), diskID SMALLINT NOT NULL, length FLOAT(4,2) NOT NULL, PRIMARY KEY(ID));
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 INSERT DATA
@@ -82,6 +89,7 @@ INSERT DATA
 //insert data into table (row,row) Value ('string',int)
 $INSERT INTO users (name,points) VALUES ('Jack',200);
 
+//test information into the table hourse
 $INSERT INTO hourse (name,disk,event,score,number) VALUES ('test','1','eventtest',123.45,1);
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
