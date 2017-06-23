@@ -30,3 +30,9 @@ Create all videos needed
 Random select video from disk 1/2/3 and pull list of relavent hourse.
 
 8. Compleatention. I think.
+
+
+mis
+
+I am creating a setup bash for the MYSQL stuff, need's to be updated when more SQL stuff going on. 
+Need's to be more error resilent, currently if the user is made but not given privilges it won't unless done manualy.
