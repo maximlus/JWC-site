@@ -24,17 +24,17 @@ $mysql -uroot -hlocalhost -p
 $CREATE DATABASE JWC;
 
 //Create a database user
-$CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'password_here';
+$CREATE USER 'webuser'@'localhost' IDENTIFIED BY 'password_here';
 //Dave1234
 
 //Give permissions to the new user
-$GRANT ALL PRIVILEGES ON JWC.* TO 'wpuser'@'localhost';
+$GRANT ALL PRIVILEGES ON JWC.* TO 'webuser'@'localhost';
 
 //Flush privlages for changes to take effect
 $FLUSH PRIVILEGES;
 
 //Connect to SQL from new user
-$mysql -uwpuser -hlocalhost JWC -p
+$mysql -u wpuser -hlocalhost JWC -pPASSWORD_HERE
 //note dropping JWC from the ^ command log's in the current user.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
