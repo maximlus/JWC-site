@@ -24,7 +24,7 @@ $container = $app->getContainer();
   Add renderering functionality to server.
   Without this the server will not render any HTML,PHP or PHTML (This took way too long to figure out...)
 */
-$container['view'] = new \Slim\Views\PhpRenderer("templates");
+$container['view'] = new \Slim\Views\PhpRenderer("./");
 
 
 /*
@@ -33,6 +33,10 @@ $container['view'] = new \Slim\Views\PhpRenderer("templates");
 $app->get("/", function($request,$response){
   $response = $this->view->render($response,"index.html");
   return $response;
+});
+
+$app->get("/test", function($req,$res){
+  return $res->getBody()->write("heyoo!");
 });
 
 /*
