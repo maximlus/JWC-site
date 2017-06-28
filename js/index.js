@@ -12,5 +12,9 @@ function testAPI(){
   }
   xhr.send();
 }
+function showadminform(){
+	
+}
+
 
 document.getElementById("btnSignup").addEventListener("click",testAPI);
