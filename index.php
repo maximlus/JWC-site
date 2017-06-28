@@ -31,7 +31,7 @@ $container['view'] = new \Slim\Views\PhpRenderer("./");
   On inital request to server, render index.html page from templates folder.
 */
 $app->get("/", function($request,$response){
-  $response = $this->view->render($response,"index.html");
+  $response = $this->view->render($response,"main.html");
   return $response;
 });
 
