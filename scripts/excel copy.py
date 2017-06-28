@@ -58,5 +58,5 @@ for x in range(1, 4):
                 maxHorse = setMaxHorse()
         file.write(
             "INSERT INTO hourse (name,disk,event,score,number)\
-         VALUES (%s,%d,%s,%g,%d);\n" % (n,x,e,s,y))
+  VALUES ('%s',%d,'%s',%g,%d);\n" % (n,x,e,s,y))
 file.close()
