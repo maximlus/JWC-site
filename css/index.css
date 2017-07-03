@@ -1,3 +1,7 @@
+html{
+  width: 100%;
+  height: 100%;
+}
 .loginBtn{
   height:200px;
   width:400px;
@@ -5,29 +9,53 @@
   margin:auto;
   margin-top:5px;
 }
-
 .jumbotron{
   background-image: url("../img/jumbotron_background.gif");
   background-repeat: no-repeat;
   background-size: 100%;
   color:black;
-   text-shadow: 2px 2px #ffffff;
+  text-shadow: 2px 2px #ffffff;
 }
+
+.loginform{
+  background-color: pink;
+  display:inline-grid;
+  text-align:center;
+}
+
+.admin{
+  background-color: blue;
+}
+
+.loginRow{
+  margin-top:100px;
+}
+
+.loginColumn{
+  padding-left:400px;
+  padding-right:400px;
+}
+
+.loginform-admin{
+  display:none;
+}
+
+.loginform-guest{
+  display: none;
+}
+
 .adminlogin{
-	display:none;
-	-webkit-transition:1s;
+  display:inline-grid;
 }
-.adminlogin.clicked{
-	display:block;
-	width:80%;
-	height:200px;
+.guestlogin{
+  display:inline-grid;
 }
-.guestform{
-	display:none;
-	-webkit-transition:1s;
+
+label{
+  float:left;
+  padding: 10px;
 }
-.guestlogin.clicked{
-	display:block;
-	width:80%;
-	height:200px;
+input{
+  float:left;
+  padding: 3px;
 }

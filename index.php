@@ -1,4 +1,6 @@
 <?php
+// Import classes
+include "php/person.php";
 // Import vendor resources
 require 'vendor/autoload.php';
 
@@ -6,37 +8,57 @@ require 'vendor/autoload.php';
 $config['displayErrorDetails'] = true;
 $config['addContentLengthHeader'] = false;
 
-/*
-  Create an instance of the Slim app.
-  This is used as a framework to handle RESTful API requests
-*/
+// Create reference to JWC databse
+$conn = new mysqli("localhost","root","toor","JWC");
+
 $app = new \Slim\App(["settings" => $config]);
 
-/*
-  Create a reference to the app's container.
-  Other libarys use access to the container to implement their own functions and features.
-  (See line 23 for example)
-*/
 $container = $app->getContainer();
 
-
-/*
-  Add renderering functionality to server.
-  Without this the server will not render any HTML,PHP or PHTML (This took way too long to figure out...)
-*/
 $container['view'] = new \Slim\Views\PhpRenderer("./");
 
+//global $person;
+$person = new Person("shaun", 21);
 
+session_start();
+
+if( !isset($_SESSION["num"]) ){
+  $_SESSION["num"] = 0;
+}
 /*
   On inital request to server, render index.html page from templates folder.
 */
 $app->get("/", function($request,$response){
-  $response = $this->view->render($response,"main.html");
+  $response = $this->view->render($response,"index.html");
   return $response;
 });
 
 $app->get("/test", function($req,$res){
-  return $res->getBody()->write("heyoo!");
+  $_SESSION["num"] = $_SESSION["num"] + 1;
+  return $res->getBody()->write($_SESSION["num"]);
+});
+
+$app->get("/mysql/test", function($req,$res){
+  // global $conn;
+  // $result = mysqli_query($conn,"SELECT * FROM horse");
+  // return $res->getBody()->write($result->lengths);
+});
+
+$app->get("/test/reset", function($req,$res){
+  $oldVal = $_SESSION["num"];
+  $_SESSION["num"] = 0;
+  return $res->getBody()->write("Test varable set to 0. Was : " . $oldVal);
+});
+
+$app->get("/api/connect", function($req,$res){
+  global $conn;
+  $dataSet = "";
+  if($result = $conn->query("SELECT * FROM horse")){
+    while($row = $result->fetch_row()){
+      $dataSet = $dataSet . $row[1] . "</br>";
+    }
+  }
+  $res->getBody()->write($dataSet);
 });
 
 /*
