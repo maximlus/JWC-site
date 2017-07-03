@@ -20,8 +20,17 @@ function showGuestForm(){
   adminLogin.classList.remove("bounceInDown");
 }
 
-function test(){
+function getViewCount(){
+  var viewCounter = document.getElementById("viewcounter");
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "/api/viewcounter/new");
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState === 4){
+      viewCounter.innerText = xhr.responseText;
+    }
+  }
 
+  xhr.send();
 }
 
 function testAPI(){
@@ -35,7 +44,7 @@ function testAPI(){
   xhr.send();
 }
 
-
-
+// Get View count on page load
+getViewCount();
 document.getElementById("btnLogin").addEventListener("click", showAdminForm);
 document.getElementById("btnSignup").addEventListener("click",testAPI);
