@@ -1,14 +1,3 @@
-html{
-  width: 100%;
-  height: 100%;
-}
-.loginBtn{
-  height:200px;
-  width:400px;
-  font-size: 50px;
-  margin:auto;
-  margin-top:5px;
-}
 .jumbotron{
   background-image: url("../img/jumbotron_background.gif");
   background-repeat: no-repeat;
@@ -17,26 +6,37 @@ html{
   text-shadow: 2px 2px #ffffff;
 }
 
-.loginform{
-  background-color: pink;
-  display:inline-grid;
-  text-align:center;
+.loginBtn{
+  height:200px;
+  width:400px;
+  font-size: 50px;
+  margin:auto;
+  margin-top:5px;
 }
 
-.admin{
-  background-color: blue;
+.loginform{
+  background-color: #34495e;
+  display:inline-grid;
+  text-align:center;
+  border:2px;
+  border-color: black;
 }
 
 .loginRow{
   margin-top:100px;
 }
 
+.loginText{
+  text-align: center;
+}
+
 .loginColumn{
-  padding-left:400px;
-  padding-right:400px;
+  padding-left:500px;
+  padding-right:500px;
 }
 
 .loginform-admin{
+  background-color: #2ecc71;
   display:none;
 }
 
@@ -47,15 +47,7 @@ html{
 .adminlogin{
   display:inline-grid;
 }
+
 .guestlogin{
   display:inline-grid;
-}
-
-label{
-  float:left;
-  padding: 10px;
-}
-input{
-  float:left;
-  padding: 3px;
 }

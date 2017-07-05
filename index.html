@@ -4,15 +4,14 @@
     <link rel="stylesheet" type="text/css" href="css/animate/animate.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-theme.min.css">
-
     <link rel="stylesheet" type="text/css" href="css/index.css">
-
-
   </head>
+
   <body>
     <div class="container">
+      
       <div class="jumbotron">
-        <h1>Japan World Cup</h1>
+        <h1>Japan World SUCC</h1>
         <p> A dynamic and new way of playing Japan World Cup.
         With the comfiness of your browser :^) </p>
       </div>
@@ -23,11 +22,10 @@
         <div class="col-md-12">
           <div class="button-area" style="display:flex">
             <button class="btn btn-success loginBtn" id="btnLogin" onclick="showAdminForm()">
-            Admin Login
+            SUCC
             </button>
-
             <button class="btn btn-primary loginBtn" id="btnSignup" onclick="showGuestForm()">
-              Guest login
+              EXTRA SUCC
             </button>
           </div>
         </div>
@@ -35,13 +33,12 @@
 
       <div class="row loginRow">
         <div class="col-md-12 loginColumn" style="display:grid;">
-
-
-          <div class="loginform loginform-admin animated" id="adminform">
+          <div class=" loginform loginform-admin animated well" id="adminform">
               <form class="adminlogin" id="adminlogin">
                 <label>Admin login</label>
-                <input type="text" placeholder="Admin login"></input></n>
-                <input type="submit" id="adminsubmit" value="login"></input>
+                <input class="loginText" id="adminUser" placeholder="Username"/>
+                <input class="loginText" id="adminPass" placeholder="Password" type="password"/>
+                <button type="button" class="btn btn-primary">Login</button>
               </form>
           </div>
 
@@ -52,8 +49,6 @@
               <input type="submit" id="guestsubmit" value="login"></input>
             </form>
           </div>
-
-
       </div>
     </div>
 
@@ -63,9 +58,7 @@
       </div>
     </div>
 
-    </div>
-
-
+  </div>
       <script src="js/jquery/jquery-3.2.1.min.js"></script>
       <script src="js/bootstrap/bootstrap.min.js"></script>
       <script src="js/index.js"></script>
