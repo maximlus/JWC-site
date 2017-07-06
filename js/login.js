@@ -1,7 +1,7 @@
 function main(){
-	//load some PHP stuff.
-	//Load in a video from JWC1/2/3. @ random.
-	//Load in List of hourses depeding what video is loaded. 
+// load some PHP stuff.
+// Load in a video from JWC1/2/3. @ random.
+// Load in List of hourses depeding what video is loaded.
 }
 
 function validateForm() {
